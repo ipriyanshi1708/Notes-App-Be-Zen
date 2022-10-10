@@ -1,0 +1,164 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+.container{
+    height: 100vh;
+    width: 100vw;
+    background-color: #dbc4f4;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.homepage{
+    height: 95vh;
+    width: 97vw;
+    background-color: #5653aa;
+    border-radius: 13px;
+    /* box-shadow: 5px 5px 5px 5px rgb(106, 129, 198); */
+    /* display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: center; */
+}
+.notes{
+    height: 85vh;
+    width: 96vw;
+    background-color: white;
+    /* margin-bottom: 4px;
+    margin-left: 4px;
+    margin-right: 4px; */
+    border-radius: 13px;
+    margin: auto;
+    margin-top: 11px;
+}
+#heading{
+    color: white;
+    margin-left: 10px;
+    padding-top: 11px;
+    font-size: 32px;
+    font-weight: bold;
+}
+#headingDiv{
+    width: 100%;
+    height: 42px;
+    display: flex;
+    justify-content: space-between;
+}
+.btn{
+   margin-right: 10px; 
+   margin-top: 10px;
+   background-color: white;
+   color: #5653aa;
+   border: none;
+   padding: 9px;
+   border-radius: 5px;
+   font-weight: bold;
+}
+.btn:hover{
+    background-color: lightgrey;
+}
+.inputForm{
+    display: flex;
+    flex-direction: column;
+    width: 50vw;
+   margin: auto;
+   margin-top: 16px;
+}
+.inputTag{
+    margin: 11px;
+    padding: 10px;
+}
+.addNoteInput{
+    margin: 11px;
+    padding: 10px;
+    height: 30vh;
+    resize: none;
+}
+.addBtn{
+    background-color: #5653aa;
+    color: white;
+}
+.addBtn:hover{
+    background-color: #8683f3;
+}
+/* CSS for popup */
+.popUp{
+    position: fixed;
+    left:0;
+    top:0;
+    width: 100vw;
+    height: 100vh;
+}
+.popUpInner{
+
+    width:60vw;
+    height: 80vh;
+    border:2px solid lightgray;
+    border-radius: 5px;
+    margin-left: 20vw;
+    margin-top: 10vh;
+    background-color: white;
+    box-shadow: 3px 3px 3px 1px gray;
+}
+.cross{
+    width:20px;
+   
+}
+/* CSS for Card */
+
+.card-list{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+/* grid-gap: 1rem; */
+justify-items: center;
+    height: 80vh;
+    width: 96vw;
+  align-items: center;
+}
+.card-container{
+    border: 2px solid gray;
+    width: 29vw;
+    height: 35vh;
+    border-radius: 5px;
+    background-color: #faffe7;
+}
+.card{
+    display: flex;
+    flex-direction: column;
+    width: 29vw;
+    height: 35vh;
+    
+}
+.card h2 {
+    align-self: center;
+}
+#tagline{
+    align-self: center;
+
+    border-radius: 20px;
+    padding: 1px 8px;
+    background-color: rgb(130, 0, 0);
+    margin-top: 2px;
+    color: white;
+}
+.card p{
+    padding: 2px 6px;
+  
+}
+.icons{
+    margin-top: auto;
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 10px;
+}
+.pagination{
+    
+    text-align: center;
+}
+.cardList-container{
+    height: 80vh;
+    width: 96vw;
+}
+
