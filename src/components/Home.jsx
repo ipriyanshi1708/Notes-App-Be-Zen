@@ -87,6 +87,9 @@ const Home = () => {
             })
             setNotes(arr);
             setIsLoading(false);
+            if(arr.length===0){
+                setErrLoading(true);
+            }
         } catch (err) {
             console.log(err.message);
             setErrLoading(true);
@@ -182,11 +185,18 @@ const Home = () => {
         <div className='container'>
             <div className='homepage'>
                 <div id='headingDiv'>
-                    <span id='heading'>Notes App</span>{
+                    <span id='heading'>Notes App</span>
+                    {
                         added ? <Alert message="Note Added Successfully" type="success" closable afterClose={() => { setAdded(false) }} /> : null
                     }
                     {
                         edited ? <Alert message="Note Edited Successfully" type="success" closable afterClose={() => { setEdited(false) }} /> : null
+                    }
+                    {
+                        errAdding? <Alert message="Error Adding Note" type="error" closable/> : null
+                    }
+                    {
+                        errEditing? <Alert message="Error Editing Note" type="error" closable /> : null
                     }
                     <button className='btn' onClick={() => {
                         setAddTrigger(true);
@@ -211,12 +221,12 @@ const Home = () => {
                         </div>
                     </Popup>
                     <div className='cardList-container'>
-                        {isLoading ? <span>Loading...</span> : errLoading ? <h1>Oops! Something went wrong.</h1> : <Cardlist notes={currentNotes} setPinId={setPinId} setPinTriggered={setPinTriggered} pinTriggered={pinTriggered} />}
+                        {isLoading ? <p className='loading'>Loading...</p> : errLoading ? <h1 className="oops">Oops! Something went wrong.</h1> : <Cardlist notes={currentNotes} setPinId={setPinId} setPinTriggered={setPinTriggered} pinTriggered={pinTriggered} />}
 
                     </div>
                     <Pagination size="small" total={notes.length} pageSize="6" onChange={(page, pageSize) => {
                         setCurrentPage(page);
-                    }} className="pagination" />
+                    }}  className="pagination" />
                 </div>
             </div>
         </div>

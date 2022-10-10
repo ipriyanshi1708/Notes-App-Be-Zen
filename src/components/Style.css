@@ -2,6 +2,9 @@
     margin: 0px;
     padding: 0px;
 }
+.loading{
+    text-align: center;
+}
 .container{
     height: 100vh;
     width: 100vw;
@@ -32,10 +35,14 @@
     margin: auto;
     margin-top: 11px;
 }
+.oops{
+    text-align: center;
+ 
+}
 #heading{
     color: white;
     margin-left: 10px;
-    padding-top: 11px;
+    padding-top: 7px;
     font-size: 32px;
     font-weight: bold;
 }
@@ -47,7 +54,7 @@
 }
 .btn{
    margin-right: 10px; 
-   margin-top: 10px;
+   margin-top: 6px;
    background-color: white;
    color: #5653aa;
    border: none;
@@ -68,12 +75,16 @@
 .inputTag{
     margin: 11px;
     padding: 10px;
+    border-radius: 9px;
+    border:none;
 }
 .addNoteInput{
     margin: 11px;
     padding: 10px;
     height: 30vh;
     resize: none;
+    border-radius: 9px;
+    border:none;
 }
 .addBtn{
     background-color: #5653aa;
@@ -85,20 +96,23 @@
 /* CSS for popup */
 .popUp{
     position: fixed;
+    display: flex;
     left:0;
     top:0;
     width: 100vw;
     height: 100vh;
+    align-items: center;
+    justify-content: center;
+
 }
+
 .popUpInner{
 
     width:60vw;
     height: 80vh;
     border:2px solid lightgray;
     border-radius: 5px;
-    margin-left: 20vw;
-    margin-top: 10vh;
-    background-color: white;
+    background-color: #d9ecfa;
     box-shadow: 3px 3px 3px 1px gray;
 }
 .cross{
@@ -122,7 +136,10 @@ justify-items: center;
     width: 29vw;
     height: 35vh;
     border-radius: 5px;
-    background-color: #faffe7;
+    background-color: #ffebe7;
+}
+.card-container:hover{
+    background-color: #f7d0c8;
 }
 .card{
     display: flex;
@@ -145,7 +162,8 @@ justify-items: center;
 }
 .card p{
     padding: 2px 6px;
-  
+    overflow: hidden;
+    height: 75px;
 }
 .icons{
     margin-top: auto;
@@ -162,3 +180,66 @@ justify-items: center;
     width: 96vw;
 }
 
+/* Responsive designing */
+@media only screen and (max-width: 325px) {
+    
+    .card-list{
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: repeat(6, 1fr);
+     
+    }
+    .card-container{
+        width: 84vw;
+        margin:9px;
+    }
+    .cardList-container{
+        overflow: scroll;
+        height: 82vh;
+    }
+    .card{
+        width: 84vw;
+    }
+    .homepage{
+        height:100vh;
+        width:100vw;
+        border-radius: 0px;
+    }
+    .notes{
+        height: 88vh;
+        width: 98vw;
+    }
+    .popUpInner{
+        width:86vw;
+    }
+    .inputForm{
+        width:74vw;
+    }
+}
+@media only screen and (min-width: 325px) and (max-width: 600px) {
+    
+    .card-list{
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+        
+    }
+    .homepage{
+        height:100vh;
+        width:100vw;
+        border-radius: 0px;
+    }
+    .notes{
+        height: 88vh;
+        width: 98vw;
+    }
+    .card-container{
+        width: 40vw;
+        margin:11px;
+    }
+    .cardList-container{
+        overflow: scroll;
+        height: 82vh;
+    }
+    .card{
+        width:40vw;
+    }
+  }
